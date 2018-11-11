@@ -6,7 +6,7 @@ if mychoice is {"1. Set User Folder Permissions"} then
 	if buttonReturned is "Cancel" then
 		error number -128 -- user canceled
 	else
-		do shell script "chown -Rv " & username1 & " /Users/" & username1 & ""
+		do shell script "chown -Rv " & username1 & " /Users/" & username1 & "" with administrator privileges
 	end if
 else
 	if mychoice is {"2. Make User an Admin"} then
